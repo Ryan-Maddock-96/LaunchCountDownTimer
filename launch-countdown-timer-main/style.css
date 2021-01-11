@@ -1,0 +1,152 @@
+    
+	body, html {
+		padding: 0;
+		margin:0;
+	}
+	
+	body {
+		min-height: 100vh;
+		background-image: url('./images/bg-stars.svg');
+		background-color: #211D2B;
+		font-size: 14px;
+		font-family: 'Red Hat Text', sans-serif;
+	}
+	
+	.container {
+		display:flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+	.content {
+		flex-grow: 1;
+		text-align: center;
+		padding: 50px 0;
+	}
+	h1, h3 {
+		color:#fff;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+	}
+	h3 {
+		color:hsl(237, 18%, 59%);
+	}
+
+.countdownContainer {
+	display:flex;
+	justify-content: center;
+}	
+.countdownContainer > div {
+	margin: 50px 20px;
+}
+.counterContainer {
+	margin-bottom: 20px;
+	height: 200px;
+	width: 200px;
+	background: #34364F;
+	font-size: 80px;
+	color:hsl(345, 95%, 68%);
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	border-radius: 10px;
+	position:relative;
+	z-index:1;
+	overflow: hidden;
+	box-shadow: 0px 10px 1px 1px #1A1A24;
+}
+
+.counterContainer:before, .counterContainer:after {
+	content: '';
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background: #181B24;
+	position: absolute;
+}
+
+.counterContainer:before {
+	left: -7px;
+}
+.counterContainer:after {
+	right: -7px;
+}
+
+.counterContainer > span {
+	height: 50%;
+	width: 100%;
+	position:absolute;
+	top: 0;
+    background: #1d1d2d;
+    opacity: 0.3;
+	border-bottom: 1px solid #0f0f18;
+}
+
+	footer { 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+		font-size: 11px; text-align: center;
+		background-image: url('./images/pattern-hills.svg');
+		    height: 197px;
+    background-repeat: no-repeat;
+	background-size: cover;
+	}
+    footer a {
+		color: #fff;
+		font-weight: bold;
+	}
+	.socials {
+		margin: 20px 0px;
+	}
+	.socials i {
+		cursor:pointer;
+		color:hsl(237, 18%, 59%);
+		font-size: 30px;
+	}
+	.socials i:hover {
+		color:hsl(345, 95%, 68%);
+	}
+	.socials i:not(:last-of-type) {
+		margin-right: 20px;
+	}
+	
+@media only screen and (max-width: 980px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.countdownContainer > div {
+	margin: 50px 10px;
+}
+.counterContainer {
+	height: 100px;
+	width: 100px;
+	font-size: 40px;
+}
+.counterContainer:before, .counterContainer:after {
+	content: '';
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background: #181B24;
+	position: absolute;
+}
+
+.counterContainer:before {
+	left: -5px;
+}
+.counterContainer:after {
+	right: -5px;
+}
+h1 {
+	font-size: 1.8em;
+}
+h3{
+	font-size: 10px;
+}
+}
+	
